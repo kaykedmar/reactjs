@@ -1,9 +1,13 @@
 //Impportando os estilos do css
-import Global from './style/global.scss'
+import { Counter } from "./components/Counter";
+import { RepositoryList } from "./components/RepositoryList";
+import Global from "./style/global.scss";
 
-export function App() { 
-  
-  
-  return <h1>Hello world</h1>
-
+export function App() {
+  return (
+    <>
+      <RepositoryList />
+      <Counter />
+    </>
+  );
 }
