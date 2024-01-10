@@ -11,7 +11,7 @@ module.exports = {
   devtool: isDevelopment ? "eval-source-map" : "source-map",
 
   // entry: Dizendo qual e o arquivo inicial da aplicação
-  entry: path.resolve(__dirname, "src", "index.jsx"),
+  entry: path.resolve(__dirname, "src", "index.tsx"),
 
   // criando a pasta e o arquivo bundle.js
   output: {
@@ -21,7 +21,7 @@ module.exports = {
 
   resolve: {
     //tipos de arquivos que webpack pode ler
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", ".ts", '.tsx'],
   },
 
   // usando o webpack-dev-server
@@ -46,7 +46,7 @@ module.exports = {
     rules: [
       {
         // verificando se e um arquivo JS
-        test: /\.jsx$/,
+        test: /\.(j|t)sx$/,
         exclude: /node_modules/,
 
         // se o arquivo for um jsx, converter em babel
